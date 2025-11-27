@@ -1,0 +1,6 @@
+[user]
+	name = Cliff Lau
+	email = cliff.lau@lgt.com
+
+[init]
+	defaultBranch = main

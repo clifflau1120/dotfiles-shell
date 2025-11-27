@@ -1,0 +1,7 @@
+theme="0x96f"
+background-opacity=0.9
+
+font-size=12
+font-family="IosevkaTerm Nerd Font"
+
+keybind="performable:ctrl+shift+r=reload_config"

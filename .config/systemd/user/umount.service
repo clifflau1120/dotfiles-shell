@@ -1,0 +1,9 @@
+[Unit]
+Description=Kill processes that could prevent the unmount of data drive
+
+[Service]
+Type=oneshot
+ExecStart=lsof -t /mnt/data | xargs kill -9
+
+[Install]
+WantedBy=shutdown.target

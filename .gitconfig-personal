@@ -1,0 +1,6 @@
+[user]
+	name = Cliff Lau
+	email = cliff@clifflau.hk
+
+[init]
+	defaultBranch = main

@@ -1,0 +1,8 @@
+# Fcitx5 configuration
+
+patch:
+    style/font_face: "Noto Sans CJK HK"
+    style/font_point: 15
+
+    app_options/tabby:
+        ascii_mode: true

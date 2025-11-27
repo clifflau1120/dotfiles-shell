@@ -1,0 +1,26 @@
+[core]
+	eol = lf
+	autocrlf = input
+	editor = nvim
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+
+[push]
+    autoSetupRemote = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[include]
+    path = .gitaliases
+
+[includeIf "gitdir:/mnt/data/code/clifflau1120/"]
+    path = .gitconfig-personal
+
+[includeIf "gitdir:/mnt/data/code/lgt/"]
+    path = .gitconfig-lgt

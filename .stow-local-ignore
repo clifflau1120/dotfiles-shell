@@ -1,0 +1,8 @@
+.git
+.editorconfig
+.prettierrc
+
+.config/logid
+.config/udev
+
+README.md

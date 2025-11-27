@@ -1,0 +1,122 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+    schema_id: quick5
+    name: 速成
+    version: "2022"
+    author:
+        - 倉頡作者：朱邦復先生
+        - JACKCHAN000@github
+    description: |
+        Rime 速成輸入法
+    dependencies:
+        - jyut6ping3
+menu:
+    page_size: 10
+
+switches:
+    - name: ascii_mode
+      reset: 0
+      states: [中文, 西文]
+    - name: full_shape
+      states: [半角, 全角]
+    - name: simplification
+      states: [漢字, 汉字]
+    - name: ascii_punct
+      states: ["。，", "．，"]
+    - name: emoji_suggestion
+      reset: 1
+      states: [😔, 😀]
+
+engine:
+    processors:
+        - ascii_composer
+        - recognizer
+        - key_binder
+        - speller
+        - punctuator
+        - selector
+        - navigator
+        - express_editor
+        - lua_processor@c2e_processor
+        - lua_processor@e2c_processor
+        - lua_processor@google_processor
+    segmentors:
+        - ascii_segmentor
+        - matcher
+        - abc_segmentor
+        - affix_segmentor@cantonese_input
+        - punct_segmentor
+        - fallback_segmentor
+    translators:
+        - punct_translator
+        - table_translator@custom_phrase
+        - reverse_lookup_translator
+        - script_translator
+        - script_translator@cantonese_input
+        - lua_translator@c2e_translator
+        - lua_translator@e2c_translator
+        - lua_translator@google_translator
+        - lua_translator@date_translator
+        - lua_translator@time_translator
+        - lua_translator@week_translator
+        - lua_translator@number_translator
+    filters:
+        - simplifier
+        - uniquifier
+        - simplifier@emoji_suggestion
+        - reverse_lookup_filter@cantonese_reverse_lookup
+
+speller:
+    alphabet: zyxwvutsrqponmlkjihgfedcba
+    delimiter: " '"
+
+translator:
+    dictionary: quick5.extended
+    comment_format:
+        - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
+    preedit_format:
+        - "xlit|abcdefghijklmnopqrstuvwxyz;'|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符··|"
+
+custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+cantonese_reverse_lookup:
+    tags: [cantonese]
+    dictionary: jyut6ping3
+    overwrite_comment: true # 覆蓋其他提示
+
+#臨時以拼音輸入中文
+cantonese_input:
+    tag: cantonese_input
+    dictionary: jyut6ping3
+    prefix: "`"
+    # 粵語拼音輸入以`+大寫〔C〕 引導
+    suffix: ;
+    tips: 【粵語拼音】
+    initial_quality: 1 # 調整該編譯器出字優先度
+
+punctuator:
+    import_preset: symbols
+
+key_binder:
+    import_preset: default
+
+recognizer:
+    import_preset: default
+    patterns:
+        email: ^[a-z][-_.0-9a-z]*@.*$
+        url: ^(www[.]|https?:|ftp:|mailto:).*$
+        cantonese_input: "`[a-z]*;?$"
+        punct: "^/([0-9]0?|[A-Za-z]*)$"
+        lua: "``[a-z0-9+.*/:-]*'?$"
+
+emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion

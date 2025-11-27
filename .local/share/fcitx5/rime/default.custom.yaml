@@ -1,0 +1,21 @@
+customization:
+    distribution_code_name: Weasel
+    distribution_version: 0.15.0.0
+    generator: "Rime::SwitcherSettings"
+    modified_time: "Wed Aug 16 00:47:14 2023"
+    rime_version: 1.8.5
+patch:
+    "key_binder/bindings":
+        - { accept: Delete, send: Delete, when: composing }
+        - { accept: comma, send: Page_Up, when: paging }
+        - { accept: period, send: Page_Down, when: has_menu }
+    "menu/page_size": 10
+    schema_list:
+        - { schema: quick5 }
+        - { schema: jyut6ping3 }
+        - { schema: stroke }
+    "style/color_scheme": google_plus
+    "style/comment_font_face": "Noto Sans CJK HK, Noto Sans CJK SC, Noto Color Emoji"
+    "style/comment_font_point": 10
+    "style/font_face": "Noto Sans CJK HK, Noto Sans CJK SC, Noto Color Emoji, Noto Emoji"
+    "style/font_point": 12
