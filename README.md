@@ -41,6 +41,7 @@ This repository contains dotfiles that configure my shell.
 
 ### Development utilities
 
+- [`prek`](https://prek.j178.dev/)
 - [`podman`](https://podman.io/)
 - [`k9s`](https://k9scli.io/)
 - [`kubectl`](https://kubernetes.io/docs/reference/kubectl/)
@@ -69,6 +70,7 @@ This repository contains dotfiles that configure my shell.
     mkdir -p $ZSH_COMPLETIONS && \
         bat --completion zsh > $ZSH_COMPLETIONS/_bat && \
         pnpm completion zsh > $ZSH_COMPLETIONS/_pnpm && \
+        COMPLETE=zsh prek > $ZSH_COMPLETIONS/_prek && \
         rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
         trivy completion zsh > $ZSH_COMPLETIONS\_trivy &&
         curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_COMPLETIONS/_dust && \
