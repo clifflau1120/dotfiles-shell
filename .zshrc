@@ -98,6 +98,7 @@ plugins=(
     gcloud
     helm
     terraform
+    opentofu
     colored-man-pages
     zsh-syntax-highlighting
     history-substring-search

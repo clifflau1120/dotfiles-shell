@@ -51,6 +51,8 @@ This repository contains dotfiles that configure my shell.
 - [`gcloud`](https://docs.cloud.google.com/sdk/docs/install)
 - [`helm`](https://helm.sh/)
 - [`terraform`](https://developer.hashicorp.com/terraform)
+- [`opentofu`](https://opentofu.org/)
+
 
 ## Installation
 
