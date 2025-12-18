@@ -1,0 +1,26 @@
+{
+  "ui_font_size": 16,
+  "ui_font_family": ".SystemUIFont",
+  "buffer_font_size": 15,
+  "buffer_font_family": "Iosevka Nerd Font",
+  "terminal": {
+    "font_size": 14,
+    "font_family": "IosevkaTerm Nerd Font",
+  },
+  "theme": "Tokyo Night Light",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "agent": {
+    "model_parameters": [],
+    "enable_feedback": false,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
