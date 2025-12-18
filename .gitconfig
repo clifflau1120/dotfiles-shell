@@ -22,5 +22,11 @@
 [includeIf "gitdir:/mnt/data/code/clifflau1120/"]
     path = .gitconfig-personal
 
+[includeIf "gitdir:/Users/cliff/code/clifflau1120/"]
+    path = .gitconfig-personal
+
 [includeIf "gitdir:/mnt/data/code/lgt/"]
+    path = .gitconfig-lgt
+
+[includeIf "gitdir:/Users/cliff/code/qdev/"]
     path = .gitconfig-lgt
