@@ -91,8 +91,9 @@ plugins=(
     k9s
     kubectl
     kubectx
-    uv
+    bun
     rust
+    uv
     flutter
     gcloud
     helm

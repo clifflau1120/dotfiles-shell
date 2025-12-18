@@ -45,6 +45,7 @@ This repository contains dotfiles that configure my shell.
 - [`k9s`](https://k9scli.io/)
 - [`kubectl`](https://kubernetes.io/docs/reference/kubectl/)
 - [`kubectx`](https://github.com/ahmetb/kubectx)
+- [`bun`](https://bun.com)
 - [`pnpm`](https://pnpm.io/)
 - [`rust`](https://rust-lang.org/)
 - [`uv`](https://docs.astral.sh/uv/)
