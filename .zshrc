@@ -82,10 +82,8 @@ plugins=(
     git
     ssh
     direnv
-    dust
     fzf
     eza
-    rg
     zoxide
     starship
     podman

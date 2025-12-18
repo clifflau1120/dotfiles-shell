@@ -58,17 +58,15 @@ This repository contains dotfiles that configure my shell.
 
 1. Install all [pre-requisites](#pre-requisites)
 
-2. Create `zsh` completions and `ohmyzsh` plugins for those not built-in:
+2. Create `zsh` completions for those not built-in:
 
-    ```sh
-    export ZSH_COMPLETIONS=$ZSH/completions
-    export ZSH_PLUGINS=$ZSH/plugins
-
-    mkdir -p $ZSH_PLUGINS/rg && rg --generate complete-zsh > $ZSH_PLUGINS/rg/rg.plugin.zsh
-    mkdir -p $ZSH_PLUGINS/dust && curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_PLUGINS/dust/dust.plugin.zsh
-
-    mkdir -p $ZSH_COMPLETIONS/bat && bat --completion zsh > $ZSH_COMPLETIONS/_bat
-    mkdir -p $ZSH_COMPLETIONS/fd && curl https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd  > $ZSH_COMPLETIONS/_fd
+    ```zsh
+    export ZSH_COMPLETIONS=~/.oh-my-zsh/completions
+    mkdir -p $ZSH_COMPLETIONS && \
+        bat --completion zsh > $ZSH_COMPLETIONS/_bat && \
+        rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
+        curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_COMPLETIONS/_dust && \
+        curl https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd  > $ZSH_COMPLETIONS/_fd
     ```
 
 3. Create symlinks for the dotfiles
