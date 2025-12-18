@@ -55,6 +55,7 @@ This repository contains dotfiles that configure my shell.
 - [`helm`](https://helm.sh/)
 - [`terraform`](https://developer.hashicorp.com/terraform/)
 - [`opentofu`](https://opentofu.org/)
+- [`trivy`](https://trivy.dev/)
 
 
 ## Installation
@@ -69,6 +70,7 @@ This repository contains dotfiles that configure my shell.
         bat --completion zsh > $ZSH_COMPLETIONS/_bat && \
         pnpm completion zsh > $ZSH_COMPLETIONS/_pnpm && \
         rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
+        trivy completion zsh > $ZSH_COMPLETIONS\_trivy &&
         curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_COMPLETIONS/_dust && \
         curl https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd  > $ZSH_COMPLETIONS/_fd
     ```
