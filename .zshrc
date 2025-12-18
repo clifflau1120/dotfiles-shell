@@ -6,8 +6,11 @@ export PATH=$HOME/.local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to bun
+export PATH="$HOME/.bun/bin:$PATH"
+
 # Path to pnpm
-export PNPM_HOME="/Users/cliff/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Initialize completions
