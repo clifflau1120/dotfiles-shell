@@ -6,8 +6,9 @@ export PATH=$HOME/.local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Initialize completions
-autoload -Uz compinit && compinit
+# Path to pnpm
+export PNPM_HOME="/Users/cliff/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -134,3 +135,6 @@ alias usystemctl="systemctl --user"
 alias vpn-up="wg-quick up wg0"
 alias vpn-down="wg-quick down wg0"
 alias split-tunnel="firejail --noprofile --netns=wg0-split-tunnel"
+
+# Initialize completions
+autoload -Uz compinit && compinit

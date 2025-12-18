@@ -45,8 +45,9 @@ This repository contains dotfiles that configure my shell.
 - [`k9s`](https://k9scli.io/)
 - [`kubectl`](https://kubernetes.io/docs/reference/kubectl/)
 - [`kubectx`](https://github.com/ahmetb/kubectx)
-- [`uv`](https://docs.astral.sh/uv/)
+- [`pnpm`](https://pnpm.io/)
 - [`rust`](https://rust-lang.org/)
+- [`uv`](https://docs.astral.sh/uv/)
 - [`flutter`](https://docs.flutter.dev/)
 - [`gcloud`](https://docs.cloud.google.com/sdk/docs/install)
 - [`helm`](https://helm.sh/)
@@ -64,6 +65,7 @@ This repository contains dotfiles that configure my shell.
     export ZSH_COMPLETIONS=~/.oh-my-zsh/completions
     mkdir -p $ZSH_COMPLETIONS && \
         bat --completion zsh > $ZSH_COMPLETIONS/_bat && \
+        pnpm completion zsh > $ZSH_COMPLETIONS/_pnpm && \
         rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
         curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_COMPLETIONS/_dust && \
         curl https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd  > $ZSH_COMPLETIONS/_fd
