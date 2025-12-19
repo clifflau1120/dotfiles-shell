@@ -41,6 +41,7 @@ This repository contains dotfiles that configure my shell.
 
 ### Development utilities
 
+- [`glab`](https://docs.gitlab.com/cli/)
 - [`prek`](https://prek.j178.dev/)
 - [`podman`](https://podman.io/)
 - [`k9s`](https://k9scli.io/)
@@ -70,6 +71,7 @@ This repository contains dotfiles that configure my shell.
     export ZSH_COMPLETIONS=~/.oh-my-zsh/completions
     mkdir -p $ZSH_COMPLETIONS && \
         bat --completion zsh > $ZSH_COMPLETIONS/_bat && \
+        glab completion -s zsh > $ZSH_COMPLETIONS/_glab \
         pnpm completion zsh > $ZSH_COMPLETIONS/_pnpm && \
         COMPLETE=zsh prek > $ZSH_COMPLETIONS/_prek && \
         rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
