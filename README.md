@@ -52,6 +52,7 @@ This repository contains dotfiles that configure my shell.
 - [`uv`](https://docs.astral.sh/uv/)
 - [`flutter`](https://docs.flutter.dev/)
 - [`mc`](https://docs.min.io/enterprise/aistor-object-store/reference/cli/)
+- [`aws`](https://aws.amazon.com/cli/)
 - [`gcloud`](https://docs.cloud.google.com/sdk/docs/install)
 - [`helm`](https://helm.sh/)
 - [`terraform`](https://developer.hashicorp.com/terraform/)

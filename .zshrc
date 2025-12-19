@@ -101,6 +101,7 @@ plugins=(
     rust
     uv
     flutter
+    aws
     gcloud
     helm
     terraform
