@@ -2,5 +2,11 @@
 	name = Cliff Lau
 	email = cliff@clifflau.hk
 
+[commit]
+	gpgsign = true
+
+[tag]
+    gpgsign = true
+
 [init]
 	defaultBranch = main
