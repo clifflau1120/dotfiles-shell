@@ -5,3 +5,6 @@
 
 # LGT Configurartions
 .gitconfig-lgt
+
+# Container Configurartions
+.config/containers/
