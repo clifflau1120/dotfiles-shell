@@ -8,3 +8,6 @@
 
 # Container Configurartions
 .config/containers/
+
+# Secrets
+.secrets

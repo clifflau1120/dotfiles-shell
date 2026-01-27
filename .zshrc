@@ -13,6 +13,9 @@ export PATH="$HOME/.bun/bin:$PATH"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
+# Secrets
+[ -f .secrets ] && source .secrets
+
 # Initialize completions
 autoload -Uz compinit && compinit
 
