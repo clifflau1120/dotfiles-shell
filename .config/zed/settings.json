@@ -13,6 +13,9 @@
         "font_size": 14,
         "font_family": "IosevkaTerm Nerd Font",
     },
+    "git_panel": {
+        "tree_view": true,
+    },
     "vim_mode": true,
     "relative_line_numbers": "enabled",
     "file_scan_exclusions": [
@@ -22,8 +25,43 @@
         "**/Thumbs.db",
     ],
     "agent": {
-        "model_parameters": [],
+        "default_profile": "write",
+        "default_model": {
+            "provider": "Cerebras",
+            "model": "zai-glm-4.7",
+        },
         "enable_feedback": false,
+    },
+    "agent_servers": {
+        "opencode": {
+            "type": "registry",
+            "default_mode": "plan",
+            "default_model": "cerebras/zai-glm-4.7",
+        },
+    },
+    "edit_predictions": {
+        "mode": "subtle",
+    },
+    "language_models": {
+        "openai_compatible": {
+            "Cerebras": {
+                "api_url": "https://api.cerebras.ai/v1",
+                "available_models": [
+                    {
+                        "name": "zai-glm-4.7",
+                        "display_name": "Z.ai GLM 4.7",
+                        "max_tokens": 131072,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": true,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                        },
+                    },
+                ],
+            },
+        },
     },
     "telemetry": {
         "diagnostics": false,
