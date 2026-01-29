@@ -1,7 +1,13 @@
 theme="0x96f"
-background-opacity=0.9
+window-width = 120
+window-height = 30
+background-opacity = 0.85
 
 font-size=14
 font-family="IosevkaTerm Nerd Font"
 
-keybind="performable:ctrl+shift+r=reload_config"
+keybind = performable:cmd+r=reload_config
+keybind = performable:ctrl+shift+r=reload_config
+keybind = global:ctrl+escape=toggle_visibility
+keybind = opt+cmd+left=previous_tab
+keybind = opt+cmd+right=next_tab
