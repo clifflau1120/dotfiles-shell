@@ -199,7 +199,7 @@
 
   # Fetch all remotes and use verbose output
   fav = fetch --all --verbose
-  
+
   # Fetch all remotes and delete stale references associated with the remotes
   fap = fetch --all --prune
 
@@ -468,6 +468,10 @@
 
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
+
+  # switch to new branch
+  sw = switch
+  swc = switch -c
 
   ### alias management aliases ###
 
@@ -1719,7 +1723,7 @@
   };f"
 
   topic-end = topic-finish
-  
+
   # Update the current topic branch by synchronizing changes.
   #
   # Example:

@@ -1,8 +1,13 @@
+[user]
+	name = Cliff Lau
+	email = cliff@clifflau.hk
+
 [core]
 	eol = lf
 	autocrlf = input
 	editor = nvim
 	pager = delta
+	excludesfile = /Users/cliff/.gitignore_global
 
 [interactive]
     diffFilter = delta --color-only
