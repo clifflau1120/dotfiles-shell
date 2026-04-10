@@ -31,21 +31,33 @@
         "**/__pycache__",
     ],
     "agent": {
-        "default_profile": "write",
+        "default_profile": "ask",
         "default_model": {
             "provider": "Cerebras",
             "model": "zai-glm-4.7",
+            "enable_thinking": true,
         },
         "enable_feedback": false,
     },
     "agent_servers": {
-        "opencode": {
+        "cursor": {
+            "favorite_config_option_values": {
+                "model": [
+                    "claude-opus-4-6[thinking=true,context=200k,effort=high,fast=false]",
+                    "claude-sonnet-4-6[thinking=true,context=200k,effort=medium]",
+                ],
+            },
             "type": "registry",
-            "default_mode": "plan",
-            "default_model": "cerebras/zai-glm-4.7",
         },
     },
     "edit_predictions": {
+        "provider":"open_ai_compatible_api",
+        "open_ai_compatible_api": {
+            "api_url": "https://api.cerebras.ai/v1",
+            "model": "zai-glm-4.7",
+            "prompt_format": "glm",
+            "max_output_tokens": 64,
+        },
         "mode": "subtle",
     },
     "language_models": {
@@ -56,11 +68,12 @@
                     {
                         "name": "zai-glm-4.7",
                         "display_name": "Z.ai GLM 4.7",
-                        "max_tokens": 131072,
+                        "max_tokens": 131000,
+                        "max_output_tokens": 40000,
                         "capabilities": {
                             "tools": true,
                             "images": false,
-                            "parallel_tool_calls": true,
+                            "parallel_tool_calls": false,
                             "prompt_cache_key": false,
                             "chat_completions": true,
                         },
