@@ -37,6 +37,7 @@ This repository contains dotfiles that configure my shell.
 - [`fzf`](https://junegunn.github.io/fzf/) - a general purpose fuzzy-finder
 - [`neovim`](https://neovim.io/) - replaces `vim` with better extensibility
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep) - replaces `grep` with better performance and modern ignores
+- [`thefuck`](https://github.com/nvbn/thefuck) - corrects errors in previous console commands
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - replaces `cd` with intelligent ranking and frequency database
 
 ### Development utilities

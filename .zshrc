@@ -147,5 +147,8 @@ alias vpn-up="wg-quick up wg0"
 alias vpn-down="wg-quick down wg0"
 alias split-tunnel="firejail --noprofile --netns=wg0-split-tunnel"
 
+# Configure thefuck
+eval $(thefuck --alias)
+
 # Install completions
 complete -o nospace -C /opt/homebrew/bin/mc mc
