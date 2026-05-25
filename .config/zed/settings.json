@@ -1,13 +1,36 @@
 {
-    "theme": "Carbonfox",
-    "icon_theme": {
-        "mode": "system",
-        "light": "Zed (Default)",
-        "dark": "Zed (Default)",
+    "format_on_save": "on",
+    "project_panel": {
+        "dock": "left",
+        "diagnostic_badges": true,
+        "starts_open": false,
     },
-    "ui_font_size": 16,
-    "ui_font_family": ".SystemUIFont",
+    "outline_panel": {
+        "dock": "left",
+    },
+    "collaboration_panel": {
+        "dock": "left",
+    },
+    "git_panel": {
+        "dock": "left",
+        "tree_view": true,
+        "show_count_badge": true,
+    },
+    "tabs": {
+        "file_icons": true,
+        "git_status": true,
+    },
+    "toolbar": {
+        "code_actions": true,
+        "selections_menu": false,
+    },
+    "theme": "Fleet Dark",
+    "icon_theme": "JetBrains New UI Icons (Dark)",
+    "ui_font_size": 15,
+    "ui_font_family": "Inter",
     "buffer_font_size": 15,
+    "buffer_font_weight": 300,
+    "buffer_line_height": "comfortable",
     "buffer_font_family": "Iosevka Nerd Font",
     "vim_mode": true,
     "relative_line_numbers": "enabled",
@@ -17,8 +40,9 @@
         "font_size": 14,
         "font_family": "IosevkaTerm Nerd Font",
     },
-    "git_panel": {
-        "tree_view": true,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
     },
     "file_scan_exclusions": [
         "**/.git",
@@ -31,32 +55,42 @@
         "**/__pycache__",
     ],
     "agent": {
+        "dock": "right",
+        "default_width": 320,
         "default_profile": "ask",
+        "enable_feedback": false,
         "default_model": {
             "provider": "Cerebras",
             "model": "zai-glm-4.7",
             "enable_thinking": true,
         },
-        "enable_feedback": false,
+        "tool_permissions": {
+            "tools": {
+                "terminal": { "default": "allow" },
+            },
+        },
     },
     "agent_servers": {
         "cursor": {
-            "favorite_config_option_values": {
-                "model": [
-                    "claude-opus-4-6[thinking=true,context=200k,effort=high,fast=false]",
-                    "claude-sonnet-4-6[thinking=true,context=200k,effort=medium]",
-                ],
-            },
             "type": "registry",
+            "default_model": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
+            "default_mode": "agent",
+            "favorite_models": [
+                "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
+                "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
+                "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
+                "claude-opus-4-6[thinking=true,context=1M,effort=max,fast=false]",
+            ],
         },
     },
     "edit_predictions": {
-        "provider":"open_ai_compatible_api",
+        "provider": "open_ai_compatible_api",
+        "allow_data_collection": "no",
         "open_ai_compatible_api": {
-            "api_url": "https://api.cerebras.ai/v1",
+            "api_url": "https://api.cerebras.ai/v1/completions",
             "model": "zai-glm-4.7",
-            "prompt_format": "glm",
-            "max_output_tokens": 64,
+            "prompt_format": "infer",
+            "max_output_tokens": 1024,
         },
         "mode": "subtle",
     },
@@ -81,9 +115,5 @@
                 ],
             },
         },
-    },
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false,
     },
 }
