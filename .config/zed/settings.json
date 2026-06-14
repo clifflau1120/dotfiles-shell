@@ -1,119 +1,119 @@
 {
-  "format_on_save": "on",
-  "project_panel": {
-    "dock": "left",
-    "diagnostic_badges": true,
-    "starts_open": false,
-  },
-  "outline_panel": {
-    "dock": "left",
-  },
-  "collaboration_panel": {
-    "dock": "left",
-  },
-  "git_panel": {
-    "dock": "left",
-    "tree_view": true,
-    "show_count_badge": true,
-  },
-  "tabs": {
-    "file_icons": true,
-    "git_status": true,
-  },
-  "toolbar": {
-    "code_actions": true,
-    "selections_menu": false,
-  },
-  "theme": "Fleet Dark",
-  "icon_theme": "JetBrains New UI Icons (Dark)",
-  "ui_font_size": 15,
-  "ui_font_family": "Inter",
-  "buffer_font_size": 15,
-  "buffer_font_weight": 300,
-  "buffer_line_height": "comfortable",
-  "buffer_font_family": "Iosevka Nerd Font",
-  "vim_mode": true,
-  "relative_line_numbers": "enabled",
-  "colorize_brackets": true,
-  "indent_guides": { "coloring": "indent_aware" },
-  "terminal": {
-    "font_size": 14,
-    "font_family": "Iosevka Nerd Font Mono",
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
-  },
-  "file_scan_exclusions": [
-    "**/.git",
-    "**/.mypy_cache",
-    "**/.pytest_cache",
-    "**/.terraform",
-    "**/.venv",
-    "**/.DS_Store",
-    "**/Thumbs.db",
-    "**/__pycache__",
-  ],
-  "agent": {
-    "dock": "right",
-    "default_width": 320,
-    "default_profile": "ask",
-    "enable_feedback": false,
-    "default_model": {
-      "provider": "Cerebras",
-      "model": "zai-glm-4.7",
-      "enable_thinking": true,
+    "format_on_save": "on",
+    "project_panel": {
+        "dock": "left",
+        "diagnostic_badges": true,
+        "starts_open": false,
     },
-    "tool_permissions": {
-      "tools": {
-        "terminal": { "default": "allow" },
-      },
+    "outline_panel": {
+        "dock": "left",
     },
-  },
-  "agent_servers": {
-    "cursor": {
-      "type": "registry",
-      "default_model": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
-      "default_mode": "agent",
-      "favorite_models": [
-        "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
-        "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
-        "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
-        "claude-opus-4-6[thinking=true,context=1M,effort=max,fast=false]",
-      ],
+    "collaboration_panel": {
+        "dock": "left",
     },
-  },
-  "edit_predictions": {
-    "provider": "open_ai_compatible_api",
-    "allow_data_collection": "no",
-    "open_ai_compatible_api": {
-      "api_url": "https://api.cerebras.ai/v1/completions",
-      "model": "zai-glm-4.7",
-      "prompt_format": "infer",
-      "max_output_tokens": 1024,
+    "git_panel": {
+        "dock": "left",
+        "tree_view": true,
+        "show_count_badge": true,
     },
-    "mode": "subtle",
-  },
-  "language_models": {
-    "openai_compatible": {
-      "Cerebras": {
-        "api_url": "https://api.cerebras.ai/v1",
-        "available_models": [
-          {
-            "name": "zai-glm-4.7",
-            "display_name": "Z.ai GLM 4.7",
-            "max_tokens": 131000,
-            "max_output_tokens": 40000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
+    "tabs": {
+        "file_icons": true,
+        "git_status": true,
+    },
+    "toolbar": {
+        "code_actions": true,
+        "selections_menu": false,
+    },
+    "theme": "Fleet Dark",
+    "icon_theme": "JetBrains New UI Icons (Dark)",
+    "ui_font_size": 15,
+    "ui_font_family": "Inter",
+    "buffer_font_size": 15,
+    "buffer_font_weight": 300,
+    "buffer_line_height": "comfortable",
+    "buffer_font_family": "Iosevka Nerd Font",
+    "vim_mode": true,
+    "relative_line_numbers": "enabled",
+    "colorize_brackets": true,
+    "indent_guides": { "coloring": "indent_aware" },
+    "terminal": {
+        "font_size": 14,
+        "font_family": "Iosevka Nerd Font Mono",
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "file_scan_exclusions": [
+        "**/.git",
+        "**/.mypy_cache",
+        "**/.pytest_cache",
+        "**/.terraform",
+        "**/.venv",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/__pycache__",
+    ],
+    "agent": {
+        "dock": "right",
+        "default_width": 320,
+        "default_profile": "ask",
+        "enable_feedback": false,
+        "default_model": {
+            "provider": "Cerebras",
+            "model": "zai-glm-4.7",
+            "enable_thinking": true,
+        },
+        "tool_permissions": {
+            "tools": {
+                "terminal": { "default": "allow" },
             },
-          },
-        ],
-      },
+        },
     },
-  },
+    "agent_servers": {
+        "cursor": {
+            "type": "registry",
+            "default_model": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
+            "default_mode": "agent",
+            "favorite_models": [
+                "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
+                "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
+                "claude-sonnet-4-6[thinking=true,context=1M,effort=high,fast=false]",
+                "claude-opus-4-6[thinking=true,context=1M,effort=max,fast=false]",
+            ],
+        },
+    },
+    "edit_predictions": {
+        "provider": "open_ai_compatible_api",
+        "allow_data_collection": "no",
+        "open_ai_compatible_api": {
+            "api_url": "https://api.cerebras.ai/v1/completions",
+            "model": "zai-glm-4.7",
+            "prompt_format": "infer",
+            "max_output_tokens": 1024,
+        },
+        "mode": "subtle",
+    },
+    "language_models": {
+        "openai_compatible": {
+            "Cerebras": {
+                "api_url": "https://api.cerebras.ai/v1",
+                "available_models": [
+                    {
+                        "name": "zai-glm-4.7",
+                        "display_name": "Z.ai GLM 4.7",
+                        "max_tokens": 131000,
+                        "max_output_tokens": 40000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true,
+                        },
+                    },
+                ],
+            },
+        },
+    },
 }
