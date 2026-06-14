@@ -8,10 +8,33 @@
         },
     },
     {
+        "context": "Editor",
         "bindings": {
             "f5": "editor::SpawnNearestTask",
             "shift-f5": "task::Spawn",
-            "cmd-!": [
+            "cmd-shift-c": "workspace::CopyRelativePath",
+        },
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-k cmd-shift-left": [
+                "workspace::MoveItemToPaneInDirection",
+                ["left"],
+            ],
+            "cmd-k cmd-shift-up": [
+                "workspace::MoveItemToPaneInDirection",
+                ["up"],
+            ],
+            "cmd-k cmd-shift-down": [
+                "workspace::MoveItemToPaneInDirection",
+                ["down"],
+            ],
+            "cmd-k cmd-shift-right": [
+                "workspace::MoveItemToPaneInDirection",
+                ["right"],
+            ],
+            "cmd-shift-1": [
                 "action::Sequence",
                 [
                     "project_panel::CollapseAllEntries",
