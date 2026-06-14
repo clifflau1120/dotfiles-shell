@@ -143,12 +143,18 @@ fi
 #
 alias cat="bat"
 alias usystemctl="systemctl --user"
-alias vpn-up="wg-quick up wg0"
-alias vpn-down="wg-quick down wg0"
-alias split-tunnel="firejail --noprofile --netns=wg0-split-tunnel"
 
 # Configure thefuck
 eval $(thefuck --alias)
 
 # Install completions
-complete -o nospace -C /opt/homebrew/bin/mc mc
+# pnpm
+export PNPM_HOME="/Users/cliff.lau/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/Users/cliff.lau/.bun/_bun" ] && source "/Users/cliff.lau/.bun/_bun"
