@@ -53,13 +53,11 @@ This repository contains dotfiles that configure my shell.
 - [`rust`](https://rust-lang.org/)
 - [`uv`](https://docs.astral.sh/uv/)
 - [`flutter`](https://docs.flutter.dev/)
-- [`mc`](https://docs.min.io/enterprise/aistor-object-store/reference/cli/)
 - [`aws`](https://aws.amazon.com/cli/)
 - [`gcloud`](https://docs.cloud.google.com/sdk/docs/install)
 - [`helm`](https://helm.sh/)
 - [`terraform`](https://developer.hashicorp.com/terraform/)
 - [`opentofu`](https://opentofu.org/)
-- [`trivy`](https://trivy.dev/)
 
 
 ## Installation
@@ -76,7 +74,6 @@ This repository contains dotfiles that configure my shell.
         pnpm completion zsh > $ZSH_COMPLETIONS/_pnpm && \
         COMPLETE=zsh prek > $ZSH_COMPLETIONS/_prek && \
         rg --generate complete-zsh > $ZSH_COMPLETIONS/_rg && \
-        trivy completion zsh > $ZSH_COMPLETIONS\_trivy &&
         curl https://raw.githubusercontent.com/bootandy/dust/master/completions/_dust > $ZSH_COMPLETIONS/_dust && \
         curl https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd  > $ZSH_COMPLETIONS/_fd
     ```
