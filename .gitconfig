@@ -24,8 +24,14 @@
 [include]
     path = .gitaliases
 
-[includeIf "gitdir:/Users/cliff.lau/code/personal/"]
+[includeIf "gitdir:/home/cliff/code/clifflau1120/"]
     path = .gitconfig-personal
+
+[includeIf "gitdir:/Users/cliff.lau/code/clifflau1120/"]
+    path = .gitconfig-personal
+
+[includeIf "gitdir:/home/cliff/code/qdev/"]
+    path = .gitconfig-lgt
 
 [includeIf "gitdir:/Users/cliff.lau/code/qdev/"]
     path = .gitconfig-lgt

@@ -6,7 +6,7 @@
 	gpgsign = true
 
 [tag]
-    gpgsign = true
+	gpgsign = true
 
 [init]
 	defaultBranch = main
