@@ -12,7 +12,8 @@
         "bindings": {
             "f5": "editor::SpawnNearestTask",
             "shift-f5": "task::Spawn",
-            "cmd-shift-c": "workspace::CopyRelativePath",
+            "ctrl-t": "file_finder::Toggle",
+            "cmd-shift-c": "editor::CopyPermalinkToLine",
         },
     },
     {
