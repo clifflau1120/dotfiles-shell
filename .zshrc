@@ -96,6 +96,7 @@ plugins=(
     eza
     zoxide
     starship
+    docker
     podman
     k9s
     kubectl
