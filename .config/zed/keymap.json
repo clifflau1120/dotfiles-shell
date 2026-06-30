@@ -2,6 +2,14 @@
 // documentation: https://zed.dev/docs/key-bindings
 [
     {
+        "bindings": {
+            "ctrl-shift-left": null,
+            "ctrl-shift-up": null,
+            "ctrl-shift-down": null,
+            "ctrl-shift-right": null,
+        },
+    },
+    {
         "context": "Pane",
         "bindings": {
             "cmd-shift-f": "workspace::NewSearch",
