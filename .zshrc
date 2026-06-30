@@ -150,7 +150,7 @@ eval $(thefuck --alias)
 
 # Install completions
 # pnpm
-export PNPM_HOME="/Users/cliff.lau/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
@@ -158,4 +158,4 @@ esac
 # pnpm end
 
 # bun completions
-[ -s "/Users/cliff.lau/.bun/_bun" ] && source "/Users/cliff.lau/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
