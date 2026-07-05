@@ -2,16 +2,13 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.bun/bin:$PATH
+export PATH=$HOME/code/clifflau1120/scripts:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Path to bun
-export PATH="$HOME/.bun/bin:$PATH"
-
-# Path to pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 # Secrets
 [ -f .secrets ] && source .secrets
@@ -147,15 +144,3 @@ alias usystemctl="systemctl --user"
 
 # Configure thefuck
 eval $(thefuck --alias)
-
-# Install completions
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
