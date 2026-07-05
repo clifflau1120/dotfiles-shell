@@ -65,6 +65,7 @@
             "enable_thinking": true,
         },
         "tool_permissions": {
+            "default": "allow",
             "tools": {
                 "terminal": { "default": "allow" },
             },
