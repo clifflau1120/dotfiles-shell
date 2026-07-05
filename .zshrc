@@ -8,6 +8,9 @@ export PATH=$HOME/code/clifflau1120/scripts:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# SSH Agent socket
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
 # Path to bun
 
 # Secrets
