@@ -107,6 +107,7 @@ plugins=(
     helm
     terraform
     opentofu
+    extract
     colored-man-pages
     zsh-syntax-highlighting
     history-substring-search
