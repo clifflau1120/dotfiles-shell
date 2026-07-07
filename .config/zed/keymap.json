@@ -21,7 +21,7 @@
             "f5": "editor::SpawnNearestTask",
             "shift-f5": "task::Spawn",
             "ctrl-t": "file_finder::Toggle",
-            "cmd-shift-c": "editor::CopyPermalinkToLine",
+            "cmd-shift-c": "workspace::CopyRelativePath",
         },
     },
     {
