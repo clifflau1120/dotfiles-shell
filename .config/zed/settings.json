@@ -73,6 +73,11 @@
     },
     "agent_servers": {
         "cursor": {
+            "default_config_options": {
+                "effort": "medium",
+                "model": "claude-sonnet-5",
+                "mode": "agent",
+            },
             "type": "registry",
             "default_model": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium,fast=false]",
             "default_mode": "agent",
