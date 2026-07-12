@@ -1,12 +1,18 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.bun/bin:$PATH
-export PATH=$HOME/code/clifflau1120/scripts:$PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/code/clifflau1120/scripts:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# pnpm
+export PNPM_HOME="/home/cliff/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
 
 # Secrets
 [ -f .secrets ] && source .secrets
@@ -96,7 +102,6 @@ plugins=(
     k9s
     kubectl
     kubectx
-    bun
     rust
     uv
     flutter
