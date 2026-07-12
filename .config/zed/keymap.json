@@ -16,15 +16,6 @@
         },
     },
     {
-        "context": "Editor",
-        "bindings": {
-            "f5": "editor::SpawnNearestTask",
-            "shift-f5": "task::Spawn",
-            "ctrl-t": "file_finder::Toggle",
-            "cmd-shift-c": "workspace::CopyRelativePath",
-        },
-    },
-    {
         "context": "Workspace",
         "bindings": {
             "cmd-k cmd-shift-left": [
@@ -43,13 +34,44 @@
                 "workspace::MoveItemToPaneInDirection",
                 ["right"],
             ],
-            "cmd-shift-1": [
-                "action::Sequence",
-                [
-                    "project_panel::CollapseAllEntries",
-                    "outline_panel::CollapseAllEntries",
-                ],
-            ],
+        },
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "cmd-1": "project_panel::CollapseSelectedEntry",
+            "cmd-!": "project_panel::CollapseAllEntries",
+        },
+    },
+    {
+        "context": "OutlinePanel",
+        "bindings": {
+            "cmd-1": "outline_panel::CollapseSelectedEntry",
+            "cmd-!": "outline_panel::CollapseAllEntries",
+        },
+    },
+    {
+        "context": "Editor && mode == full",
+        "bindings": {
+            "cmd-1": "editor::ToggleFold",
+            "cmd-!": "editor::ToggleFoldRecursive",
+            "cmd-2": "git::Blame",
+            "ctrl-t": "file_finder::Toggle",
+            "cmd-shift-x": "editor::CopyPermalinkToLine",
+            "cmd-shift-c": "workspace::CopyRelativePath",
+            "f5": "editor::SpawnNearestTask",
+            "shift-f5": "task::Spawn",
+            "ctrl-shift-e": "vim::LineUp",
+            "ctrl-shift-y": "vim::LineDown",
+        },
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-e": "terminal::ScrollLineDown",
+            "ctrl-shift-e": "terminal::ScrollLineUp",
+            "ctrl-y": "terminal::ScrollLineUp",
+            "ctrl-shift-y": "terminal::ScrollLineDown",
         },
     },
 ]
