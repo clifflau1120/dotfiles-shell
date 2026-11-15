@@ -1,12 +1,10 @@
 [user]
 	name = Cliff Lau
 	email = cliff@clifflau.hk
+	signingkey = CE4BB57AED9D981D
 
 [commit]
 	gpgsign = true
 
 [tag]
 	gpgsign = true
-
-[init]
-	defaultBranch = main
