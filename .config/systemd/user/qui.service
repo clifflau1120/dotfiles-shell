@@ -1,0 +1,14 @@
+[Unit]
+Description=qBittorrent Web UI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.config/qui
+ExecStart=/usr/local/bin/qui serve --config-dir %h/.config/qui
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
