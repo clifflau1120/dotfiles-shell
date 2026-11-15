@@ -2,20 +2,9 @@
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/code/clifflau1120/scripts:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# pnpm
-export PNPM_HOME="/home/cliff/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-
-# Secrets
-[ -f .secrets ] && source .secrets
 
 # Initialize completions
 autoload -Uz compinit && compinit
@@ -92,17 +81,12 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     ssh
-    direnv
     fzf
     eza
     zoxide
     starship
     docker
     podman
-    k9s
-    kubectl
-    kubectx
-    rust
     uv
     flutter
     aws
@@ -111,6 +95,7 @@ plugins=(
     terraform
     opentofu
     extract
+    copyfile
     colored-man-pages
     zsh-syntax-highlighting
     history-substring-search
@@ -148,3 +133,6 @@ alias usystemctl="systemctl --user"
 
 # Configure thefuck
 eval $(thefuck --alias)
+
+# Secrets
+[ -f .secrets ] && source .secrets
